@@ -27,7 +27,6 @@ def new_pokemon():
     img_url = request.form.get('img_url')
     user_id = current_user.id
     types = request.form.getlist('pokemon_types')
-
     p_types = []
     for id in types:
       p_types.append(db.session.get(Type, id))
